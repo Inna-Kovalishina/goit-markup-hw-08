@@ -1,0 +1,30 @@
+/* колір основного тексту #212121 */
+/* колір другорядного тексту #757575 */
+/* акцент тексту #2196F3 */
+/* білий #FFFFFF */
+/* додатковий чорний колір тексту #000000 */
+
+/* колір основного фону #FFFFFF */
+/* колір другорядного фону #2F303A */
+/* колір додаткового фону #F5F5F5 */
+
+/* колір фону кнопки #F5F4FA */
+
+
+:root {
+    /* Fonts */
+    --main-font: Roboto, sans-serif;
+    --second-font: Raleway, sans-serif;
+
+    /* Colors */
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --accent-color: #2196F3;
+    --additional-text-color: #000000;
+
+    /* Background color */
+    --primary-background-color: #FFFFFF;
+    --secondary-background-color: #2F303A;
+    --additional-background-color: #F5F5F5;
+    --button-background-color: #F5F4FA;
+}

@@ -1,0 +1,22 @@
+/* Базові налаштування макету */
+@import "./base/fonts";
+@import "./base/normalize";
+@import "./base/reset";
+
+/* Загальні налаштування компонентів макету */
+@import "./utils/vars";
+@import "./utils/common";
+
+/* Стилізація макету СТУДІЯ */
+@import "./components/header";
+@import "./components/hero";
+@import "./components/feature";
+@import "./components/works";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/backdrop";
+@import "./components/form";
+
+/* Стилізація макету ПОРТФОЛІО */
+@import "./components/portfolio";
