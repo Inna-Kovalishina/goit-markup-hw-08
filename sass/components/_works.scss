@@ -1,6 +1,10 @@
 /* Стилізація секції "Чим ми займаємося" */
 .section__works {
     padding-top: 0;
+
+    @media screen and (max-width: $pre-desktop) {
+        display: none;
+    }
 }
 
 .works__list {

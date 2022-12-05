@@ -1,20 +1,41 @@
 /* Стилізація кнопок фільтру */
 .projects__filter-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+
+    @media screen and (max-width: $pre-tablet) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: space-between;
+        height: 91px;
+        width: 326px;
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+        align-items: flex-start;
+        height: 54px;
+        margin-bottom: 14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 34px;
+    }
 }
 
 .projects__filter-item:not(:last-child) {
     margin-right: 8px;
+
+    @media screen and (max-width: $pre-tablet) {
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+    }
 }
 
 .projects__filter-button {
     display: block;
-    padding-top: 6px;
-    padding-right: 22px;
-    padding-bottom: 6px;
-    padding-left: 22px;
+    padding: 6px 22px;
     cursor: pointer;
     background-color: var(--button-background-color);
     color: var(--primary-text-color);
@@ -37,19 +58,36 @@
             box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
                         0px 1px 2px rgba(0, 0, 0, 0.08),
                         0px 3px 1px rgba(0, 0, 0, 0.1);
+            // padding-right: 25px;
+            // padding-left: 25px;
         }
 }
 
 
 /* Стилізація карток робіт */
 .projects__examples-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    display: block;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 }
 
 .projects__examples-item {
-    flex-basis: calc((100% - 30px * 2) / 3);
+
+    @media screen and (max-width: $pre-tablet) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - 30px * 2) / 3);
+    }
 }
 
 .projects__examples-link {

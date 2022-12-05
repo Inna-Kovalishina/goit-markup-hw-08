@@ -22,7 +22,7 @@
                 </nav>
                 <ul class="header-contact__list">
                     <li class="header-contact__item">
-                        <a class="header-contact__link" href="mailto:info@devstudio.com">
+                        <a class="header-contact__link header-contact__link--mail" href="mailto:info@devstudio.com">
                             <svg class="header-contact__icon" width="16" height="12">
                                 <use href="./images/symbol-defs.svg#icon-envelope"></use>
                             </svg>
@@ -30,7 +30,7 @@
                         </a>
                     </li>
                     <li class="header-contact__item">
-                        <a class="header-contact__link" href="tel:+380961111111">
+                        <a class="header-contact__link header-contact__link--tel" href="tel:+380961111111">
                             <svg class="header-contact__icon" width="10" height="16">
                                 <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                             </svg>
@@ -38,6 +38,37 @@
                         </a>
                     </li>
                 </ul>
+                <button class="burger js-open-menu" type="button"><span class="burger__line"></span></button>
+            </div>
+        
+        
+            <div class="mobile-menu__container js-menu-container" id="mobile-menu">
+                <div class="mobile-menu__wrapper">
+                    <button class="menu-toggle js-close-menu" type="button">
+                        <span class="menu-toggle__line"></span>
+                    </button>
+                    <ul class="mobile-menu__navigation">
+                        <li class="mobile-menu__item"><a
+                                class="mobile-menu__link mobile-menu__link-navigation"
+                                href="./index.html">Студія</a></li>
+                        <li class="mobile-menu__item"><a class="mobile-menu__link mobile-menu__link-navigation mobile-menu__link-navigation--current"
+                                href="./portfolio.html">Портфоліо</a></li>
+                        <li class="mobile-menu__item"><a class="mobile-menu__link mobile-menu__link-navigation"
+                                href="">Контакти</a></li>
+                    </ul>
+                    <ul class="mobile-menu__contacts">
+                        <li class="mobile-menu__item"><a class="mobile-menu__link mobile-menu__contacts--tel" href="">+38 096
+                                111 11 11</a></li>
+                        <li class="mobile-menu__item"><a class="mobile-menu__link mobile-menu__contacts--mail"
+                                href="">info@devstudio.com</a></li>
+                    </ul>
+                    <ul class="mobile-menu__social-networks">
+                        <li class="mobile-menu__item-networks"><a class="mobile-menu__link-networks" href="">Instagram</a></li>
+                        <li class="mobile-menu__item-networks"><a class="mobile-menu__link-networks" href="">Twitter</a></li>
+                        <li class="mobile-menu__item-networks"><a class="mobile-menu__link-networks" href="">Facebook</a></li>
+                        <li class="mobile-menu__item-networks"><a class="mobile-menu__link-networks" href="">LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
     <main class="main">
@@ -56,9 +87,23 @@
                     <li class="projects__examples-item">
                         <a class="projects__examples-link" href="#">
                             <div class="projects__examples-image">
-                                <img class="projects__examples-picture" src="./images/project1.jpg" alt="На екрані ноутбука демонструються три фото співробітників"
-                                    width="370" height="294">
-                                <div class="projects__examples-overlay">
+                                <picture>
+                                    <source 
+                                        srcset="./images/project1-1200.jpg 1x, ./images/project1-1200@2x.jpg 2x" media="(min-width: 1200px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project1-768.jpg 1x, ./images/project1-768@2x.jpg 2x" media="(min-width: 768px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project1-480.jpg 1x, ./images/project1-480@2x.jpg 2x" media="(max-width: 767px)"
+                                    >
+                                    <img 
+                                        srcset="./images/project1-1200.jpg 1x, ./images/project1-1200@2x.jpg 2x"
+                                        src="./images/project1-1200.jpg"
+                                        alt="На екрані ноутбука демонструються три фото співробітників"
+                                    >
+                                </picture>
+                               <div class="projects__examples-overlay">
                                     <p class="projects__examples-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                         дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
@@ -72,8 +117,21 @@
                     <li class="projects__examples-item">
                         <a class="projects__examples-link" href="#">
                             <div class="projects__examples-image">
-                                <img class="projects__examples-picture" src="./images/project2.jpg"
-                                    alt="Два баскетболісти у прижку. Один у фіолетовій формі, інший - у білій" width="370" height="294">
+                                <picture>
+                                    <source 
+                                        srcset="./images/project2-1200.jpg 1x, ./images/project2-1200@2x.jpg 2x" media="(min-width: 1200px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project2-768.jpg 1x, ./images/project2-768@2x.jpg 2x" media="(min-width: 768px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project2-480.jpg 1x, ./images/project2-480@2x.jpg 2x" media="(max-width: 767px)"
+                                    >
+                                    <img 
+                                        srcset="./images/project2-1200.jpg 1x, ./images/project2-1200@2x.jpg 2x" src="./images/project2-1200.jpg"
+                                        alt="Два баскетболісти у прижку. Один у фіолетовій формі, інший - у білій"
+                                    >
+                                </picture>
                                 <div class="projects__examples-overlay">
                                     <p class="projects__examples-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                         дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -88,8 +146,21 @@
                     <li class="projects__examples-item">
                         <a class="projects__examples-link" href="#">
                             <div class="projects__examples-image">
-                                <img class="projects__examples-picture" src="./images/project3.jpg"
-                                    alt="На фоні вертикальнонамальованої риби є напис Ресторан морепродуктів" width="370" height="294">
+                                <picture>
+                                    <source 
+                                        srcset="./images/project3-1200.jpg 1x, ./images/project3-1200@2x.jpg 2x" media="(min-width: 1200px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project3-768.jpg 1x, ./images/project3-768@2x.jpg 2x" media="(min-width: 768px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project3-480.jpg 1x, ./images/project3-480@2x.jpg 2x" media="(max-width: 767px)"
+                                    >
+                                    <img 
+                                        srcset="./images/project3-1200.jpg 1x, ./images/project3-1200@2x.jpg 2x" src="./images/project3-1200.jpg"
+                                        alt="На фоні вертикальнонамальованої риби є напис Ресторан морепродуктів"
+                                    >
+                                </picture>
                                 <div class="projects__examples-overlay">
                                     <p class="projects__examples-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                         дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -104,8 +175,21 @@
                     <li class="projects__examples-item">
                         <a class="projects__examples-link" href="#">
                             <div class="projects__examples-image">
-                                <img class="projects__examples-picture" src="./images/project4.jpg" alt="Чорні бездротові накладні навушники" width="370"
-                                    height="294">
+                                <picture>
+                                    <source 
+                                        srcset="./images/project4-1200.jpg 1x, ./images/project4-1200@2x.jpg 2x" media="(min-width: 1200px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project4-768.jpg 1x, ./images/project4-768@2x.jpg 2x" media="(min-width: 768px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project4-480.jpg 1x, ./images/project4-480@2x.jpg 2x" media="(max-width: 767px)"
+                                    >
+                                    <img 
+                                        srcset="./images/project4-1200.jpg 1x, ./images/project4-1200@2x.jpg 2x" src="./images/project4-1200.jpg"
+                                        alt="Чорні бездротові накладні навушники"
+                                    >
+                                </picture>
                                 <div class="projects__examples-overlay">
                                     <p class="projects__examples-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                         дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -120,8 +204,21 @@
                     <li class="projects__examples-item">
                         <a class="projects__examples-link" href="#">
                             <div class="projects__examples-image">
-                                <img class="projects__examples-picture" src="./images/project5.jpg" alt="Дві коробочки. Більша білого кольору, менша - коричневого"
-                                    width="370" height="294">
+                                <picture>
+                                    <source 
+                                        srcset="./images/project5-1200.jpg 1x, ./images/project5-1200@2x.jpg 2x" media="(min-width: 1200px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project5-768.jpg 1x, ./images/project5-768@2x.jpg 2x" media="(min-width: 768px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project5-480.jpg 1x, ./images/project5-480@2x.jpg 2x" media="(max-width: 767px)"
+                                    >
+                                    <img 
+                                        srcset="./images/project5-1200.jpg 1x, ./images/project5-1200@2x.jpg 2x" src="./images/project5-1200.jpg"
+                                        alt="Чорні бездротові накладні навушники"
+                                    >
+                                </picture>
                                 <div class="projects__examples-overlay">
                                     <p class="projects__examples-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                         дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -136,8 +233,21 @@
                     <li class="projects__examples-item">
                         <a class="projects__examples-link" href="#">
                             <div class="projects__examples-image">
-                                <img class="projects__examples-picture" src="./images/project6.jpg" alt="Білий напис на чорному екрані моноблока iMac" width="370"
-                                    height="294">
+                                <picture>
+                                    <source 
+                                        srcset="./images/project6-1200.jpg 1x, ./images/project6-1200@2x.jpg 2x" media="(min-width: 1200px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project6-768.jpg 1x, ./images/project6-768@2x.jpg 2x" media="(min-width: 768px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project6-480.jpg 1x, ./images/project6-480@2x.jpg 2x" media="(max-width: 767px)"
+                                    >
+                                    <img 
+                                        srcset="./images/project6-1200.jpg 1x, ./images/project6-1200@2x.jpg 2x" src="./images/project6-1200.jpg"
+                                        alt="Білий напис на чорному екрані моноблока iMac"
+                                    >
+                                </picture>
                                 <div class="projects__examples-overlay">
                                     <p class="projects__examples-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                         дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -152,8 +262,21 @@
                     <li class="projects__examples-item">
                         <a class="projects__examples-link" href="#">
                             <div class="projects__examples-image">
-                                <img class="projects__examples-picture" src="./images/project7.jpg" alt="Розгорнута книга з ілюстраціями життя жінок" width="370"
-                                    height="294">
+                                <picture>
+                                    <source 
+                                        srcset="./images/project7-1200.jpg 1x, ./images/project7-1200@2x.jpg 2x" media="(min-width: 1200px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project7-768.jpg 1x, ./images/project7-768@2x.jpg 2x" media="(min-width: 768px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project7-480.jpg 1x, ./images/project7-480@2x.jpg 2x" media="(max-width: 767px)"
+                                    >
+                                    <img 
+                                        srcset="./images/project7-1200.jpg 1x, ./images/project7-1200@2x.jpg 2x" src="./images/project7-1200.jpg"
+                                        alt="Розгорнута книга з ілюстраціями життя жінок"
+                                    >
+                                </picture>
                                 <div class="projects__examples-overlay">
                                     <p class="projects__examples-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                         дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -168,7 +291,21 @@
                     <li class="projects__examples-item">
                         <a class="projects__examples-link" href="#">
                             <div class="projects__examples-image">
-                                <img class="projects__examples-picture" src="./images/project8.jpg" alt="Бірка-етикетка на канатику" width="370" height="294">
+                                <picture>
+                                    <source 
+                                        srcset="./images/project8-1200.jpg 1x, ./images/project8-1200@2x.jpg 2x" media="(min-width: 1200px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project8-768.jpg 1x, ./images/project8-768@2x.jpg 2x" media="(min-width: 768px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project8-480.jpg 1x, ./images/project8-480@2x.jpg 2x" media="(max-width: 767px)"
+                                    >
+                                    <img 
+                                        srcset="./images/project8-1200.jpg 1x, ./images/project8-1200@2x.jpg 2x" src="./images/project8-1200.jpg"
+                                        alt="Бірка-етикетка на канатику"
+                                    >
+                                </picture>
                                 <div class="projects__examples-overlay">
                                     <p class="projects__examples-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                         дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -183,8 +320,21 @@
                     <li class="projects__examples-item">
                         <a class="projects__examples-link" href="#" target="_blank">
                             <div class="projects__examples-image">
-                                <img class="projects__examples-picture" src="./images/project9.jpg" alt="Кисті рук друкують на клавіатурі ноутбука" width="370"
-                                    height="294">
+                                <picture>
+                                    <source 
+                                        srcset="./images/project9-1200.jpg 1x, ./images/project9-1200@2x.jpg 2x" media="(min-width: 1200px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project9-768.jpg 1x, ./images/project9-768@2x.jpg 2x" media="(min-width: 768px)"
+                                    >
+                                    <source 
+                                        srcset="./images/project9-480.jpg 1x, ./images/project9-480@2x.jpg 2x" media="(max-width: 767px)"
+                                    >
+                                    <img 
+                                        srcset="./images/project9-1200.jpg 1x, ./images/project9-1200@2x.jpg 2x" src="./images/project9-1200.jpg"
+                                        alt="Кисті рук друкують на клавіатурі ноутбука"
+                                    >
+                                </picture>
                                 <div class="projects__examples-overlay">
                                     <p class="projects__examples-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                         дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -202,58 +352,63 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <ul class="footer__contacts-list">
-                <li class="contacts-item__address">
-                    <a class="logo footer__logo" href="./index.html">Web<span
-                            class="logo--footer-decorated">Studio</span></a>
-                    <address>
-                        <ul class="address__list">
-                            <li class="address__item"><a class="address__link address__link--map"
-                                    href="https://goo.gl/maps/bEffphsuhpdSaDkT6" target="_blank"
-                                    rel="noreferrer noopener">м. Київ, пр-т Лесі Українки, 26</a></li>
-                            <li class="address__item"><a class="address__link address__link--contact"
-                                    href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <div class="footer__contacts-list">
+                <div class="contacts-item__wrap">
+                    <div class="contacts-item__address">
+                        <a class="logo footer__logo" href="./index.html">Web<span
+                                class="logo--footer-decorated">Studio</span></a>
+                        <address class="address">
+                            <ul class="address__list">
+                                <li class="address__item">
+                                    <a class="address__link address__link--map" href="https://goo.gl/maps/bEffphsuhpdSaDkT6"
+                                        target="_blank" rel="noreferrer noopener">м. Київ, пр-т Лесі Українки, 26</a>
+                                </li>
+                                <li class="address__item">
+                                    <a class="address__link address__link--contact"
+                                        href="mailto:info@devstudio.com">info@devstudio.com</a>
+                                </li>
+                                <li class="address__item">
+                                    <a class="address__link address__link--contact" href="tel:+380961111111">+38 096 111 11
+                                        11</a>
+                                </li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="contacts-item__social-networks">
+                        <h3 class="social-networks__text">Приєднуйтесь</h3>
+                        <ul class="social-networks__list">
+                            <li class="social-networks__item">
+                                <a class="social-networks__link-footer" href="">
+                                    <svg class="social-networks__icon" width="20" height="20">
+                                        <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
                             </li>
-                            <li class="address__item"><a class="address__link address__link--contact"
-                                    href="tel:+380961111111">+38 096 111 11
-                                    11</a></li>
+                            <li class="social-networks__item">
+                                <a class="social-networks__link-footer" href="">
+                                    <svg class="social-networks__icon" width="20" height="20">
+                                        <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-networks__item">
+                                <a class="social-networks__link-footer" href="">
+                                    <svg class="social-networks__icon" width="20" height="20">
+                                        <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-networks__item">
+                                <a class="social-networks__link-footer" href="">
+                                    <svg class="social-networks__icon" width="20" height="20">
+                                        <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
-                    </address>
-                </li>
-                <li class="contacts-item__social-networks">
-                    <h3 class="social-networks__text">Приєднуйтесь</h3>
-                    <ul class="social-networks__list">
-                        <li class="social-networks__item">
-                            <a class="social-networks__link-footer" href="">
-                                <svg class="social-networks__icon" width="20" height="20">
-                                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social-networks__item">
-                            <a class="social-networks__link-footer" href="">
-                                <svg class="social-networks__icon" width="20" height="20">
-                                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social-networks__item">
-                            <a class="social-networks__link-footer" href="">
-                                <svg class="social-networks__icon" width="20" height="20">
-                                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social-networks__item">
-                            <a class="social-networks__link-footer" href="">
-                                <svg class="social-networks__icon" width="20" height="20">
-                                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="contacts-item__subscription">
+                    </div>
+                </div>
+                <div class="contacts-item__subscription">
                     <form class="subscription__form" autocomplete="off">
                         <label for="user-email" class="subscription__label"> Підпишіться на розсилку </label>
                         <div class="subscription__wrapper">
@@ -269,10 +424,13 @@
                             </button>
                         </div>
                     </form>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
+
 </body>
 
 </html>

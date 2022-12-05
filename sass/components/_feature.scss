@@ -1,23 +1,39 @@
 /* Стилізація секції "Особливості" */
 
 .feature__list {
+
+    @media screen and (min-width: $tablet) {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    }
 }
 
 .feature__item {
-    display: block;
-    max-width: 270px;
 
-    &:not(:last-child) {
-        margin-right: 30px;
+    @media screen and (max-width: $pre-tablet) {
+        &:not(:last-child) {
+            margin-bottom: 30px;        
+        } 
+    }
+
+    @media screen and (min-width: $tablet) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - 30px * 3) / 4);
     }
 }
 
 .feature__picture {
+    width: 100%;
+    height: auto;
     margin-bottom: 30px;
-    height: 120px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     background-color: #F5F4FA;
     border-radius: 4px;
     display: flex;
@@ -25,14 +41,25 @@
     align-items: center;
 }
 
+.feature__icon {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .feature__title {
     color: var(--primary-text-color);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 10px;
+
+    @media screen and (min-width: $tablet) {
+        text-align: left;
+    }
 }
 
 .feature__text {
@@ -40,4 +67,5 @@
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    flex-grow: 1;
 }
